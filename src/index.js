@@ -6,10 +6,12 @@ import LandingPage from "./components/landing-page";
 import Education from "./components/education";
 import Projects from "./components/projects";
 import Contact from "./components/contact";
+import Nav from "./components/subcomponents/nav";
 
 ReactDOM.render(
   <React.StrictMode>
     <div className="container">
+        <Nav />
         <LandingPage />
         <Education />
         <Projects />

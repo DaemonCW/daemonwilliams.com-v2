@@ -1,5 +1,7 @@
-$backgroundColorA: #192021;
-$backgroundColorB: #131d1f;
+$backgroundColorA: rgb(214, 241, 255);
+$backgroundColorB: rgb(255, 255, 255);
+$textColor: rgb(0, 0, 0);
+$accentColor: rgb(138, 187, 212);
 
 * {
   margin: 0;
@@ -9,7 +11,43 @@ $backgroundColorB: #131d1f;
 
 body {
   font-family: Gotham Medium,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;
-  color: #fff;
+  color: $textColor;
+  a {
+    color: $textColor;
+    text-decoration: none;
+  }
+}
+
+.nav {
+  position: fixed;
+  margin-left: 6rem;
+  padding: 3rem;
+  font-size: 1.2em;
+  display: none;
+  li {
+    list-style: none;
+    margin-top: .75rem;
+
+    a {
+      text-transform: uppercase;
+
+      &:hover {
+        color: $accentColor;
+      }
+    }
+  }
+}
+
+.btn {
+  border: 1px $textColor solid;
+  padding: .9rem;
+  margin: 5px;
+  text-transform: uppercase;
+
+    &:hover {
+      color: $accentColor;
+      border: 1px $accentColor solid;
+    }
 }
 
 .container {
@@ -24,8 +62,29 @@ body {
     height: 100vh;
     scroll-snap-align: start;
   }
+
+
   #landing-page {
     background-color: $backgroundColorA;
+    flex-direction: row;
+
+    #lead {
+      margin-left: 20rem;
+      width: 40%;
+
+      h1 {
+        font-size: 3em;
+      }
+
+      p {
+        font-weight: normal;
+        font-size: 1.2em;
+      }
+    }
+
+    #landing-buttons {
+      max-width: 40%;
+    }
   }
 
   #education-page {
